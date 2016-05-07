@@ -1,6 +1,5 @@
 package fr.electrogames.proxy;
 
-import fr.electrogames.CommonProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

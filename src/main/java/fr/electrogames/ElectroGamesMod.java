@@ -1,5 +1,6 @@
 package fr.electrogames;
 
+import fr.electrogames.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -21,7 +22,7 @@ public class ElectroGamesMod {
     public static final String version = "0.1 ALPHA - 1.9";
 
     @SidedProxy(clientSide="fr.electrogames.proxy.CommonProxy", serverSide="fr.electrogames.proxy.ServerProxy")
-    public static fr.electrogames.CommonProxy proxy;
+    public static CommonProxy proxy;
 
     public Logger logger;
 
