@@ -14,21 +14,23 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class Blocks {
 
-    public static Block blockTablette;
+    public static Block Tablette;
+    public static Block Window;
 
     public static void init() {
 
-        blockTablette = new  BlockTablette(Material.wood).setUnlocalizedName(
+        Tablette = new  BlockTablette(Material.wood).setUnlocalizedName(
                 "table").setCreativeTab(CreativeTabs.tabDecorations);
+        Window = new BlockWindow(Material.glass).setUnlocalizedName("").setCreativeTab(CreativeTabs.tabBlock);
     }
 
     public static void register() {
-        GameRegistry.registerBlock(blockTablette, blockTablette
+        GameRegistry.registerBlock(Tablette, Tablette
                 .getUnlocalizedName().substring(5));
 
     }
     public static void registerRenders() {
-        registerRender(blockTablette);
+        registerRender(Tablette);
 
     }
 
