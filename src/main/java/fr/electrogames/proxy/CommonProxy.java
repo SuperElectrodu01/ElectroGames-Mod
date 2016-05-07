@@ -1,4 +1,4 @@
-package fr.electrogames;
+package fr.electrogames.proxy;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
