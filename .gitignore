@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # eclipse
 bin
 *.launch
@@ -20,3 +21,6 @@ build
 # other
 eclipse
 run
+=======
+src/
+>>>>>>> master
