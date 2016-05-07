@@ -27,11 +27,12 @@ public class Blocks {
     public static void register() {
         GameRegistry.registerBlock(Tablette, Tablette
                 .getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(Window, Window.getUnlocalizedName().substring(5));
 
     }
     public static void registerRenders() {
         registerRender(Tablette);
-
+        registerRender(Window);
     }
 
     public static void registerRender(Block block) {
