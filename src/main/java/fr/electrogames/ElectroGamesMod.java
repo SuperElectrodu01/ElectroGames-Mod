@@ -1,52 +1,61 @@
 package fr.electrogames;
 
+import fr.electrogames.blocks.Blocks;
 import fr.electrogames.proxy.CommonProxy;
+import fr.electrogames.recipe.RecipeRegister;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import java.util.logging.Logger;
-
 /**
  * Created by Louis (a.k.a Obelouix) on 06/05/2016.
  * (c) 2016 ElectroGames
  * ElectroGames n'est pas affilié à Mojang AB
 */
- @Mod(modid = ElectroGamesMod.ModId, name = ElectroGamesMod.ModName, version = ElectroGamesMod.version)
+ @Mod(modid = Reference.ModID, name = Reference.ModName, version = Reference.version)
 public class ElectroGamesMod {
 
-    public static final String ModId = "ElectroGames";
-    public static final String ModName = "Electro Games";
-    public static final String version = "0.1 ALPHA - 1.9";
 
-    @SidedProxy(clientSide="fr.electrogames.proxy.CommonProxy", serverSide="fr.electrogames.proxy.ServerProxy")
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static CommonProxy proxy;
 
-    public Logger logger;
+    @Mod.EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
 
-    public ElectroGamesMod() {
-        logger = Logger.getLogger(getClass().getName().replace(getClass().getName(), "[ElectroGames]"));
+        //RoleplayItems.init();
+        //RoleplayItems.register();
+          Blocks.init();
+          Blocks.register();
+    }
+
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event) {
+
+        proxy.registerRenders();
+        RecipeRegister.init();
 
     }
 
     @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent e) {
-        new ElectroGamesMod();
-        logger.info("Démarrage de l'initialisation");
-        proxy.preInit(e);
+    public void postInit(FMLPostInitializationEvent event) {
+
     }
 
     @Mod.EventHandler
-    public void init(FMLInitializationEvent e) {
-        logger.info("Initialisation en cours...");
-        proxy.init(e);
+    public static void preInitClientOnly() {
+        //RoleplayBlockMetadata.preInitClientOnly();
     }
 
     @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent e) {
-        logger.info("Initialisation terminée \n chargements des éléments");
-        proxy.postInit(e);
+    public static void initClientOnly() {
+       //BlockMetadata.initClientOnly();
+    }
+
+    @Mod.EventHandler
+    public static void preInitCommon()
+    {
+       //BlockMetadata.preInitCommon();
     }
 }
