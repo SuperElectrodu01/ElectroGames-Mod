@@ -1,14 +1,13 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "ElectroGames",
+  "name": "Electro Games Mod",
+  "description": "Un mod qui rajoute diverse chose",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Electro Games Industrie (§4Obelouix , §2SuperElectrodu01)"],
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
