@@ -21,7 +21,7 @@ public class Blocks {
 
         Tablette = new  BlockTablette(Material.wood).setUnlocalizedName(
                 "table").setCreativeTab(CreativeTabs.tabDecorations);
-        Window = new BlockWindow(Material.glass).setUnlocalizedName("").setCreativeTab(CreativeTabs.tabBlock);
+        Window = new BlockWindow(Material.glass).setUnlocalizedName("window").setCreativeTab(CreativeTabs.tabBlock);
     }
 
     public static void register() {
