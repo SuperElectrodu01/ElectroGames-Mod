@@ -9,6 +9,11 @@ jdk:
 # Tell Travis we want container-based builds.
 sudo: false
 
+# whitelist
+branches:
+  only:
+    - master
+
 # Use the gradle wrapper for 2.7
 before_install:
   - chmod +x gradlew
