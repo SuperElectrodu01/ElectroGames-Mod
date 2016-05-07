@@ -19,7 +19,7 @@ public class Blocks {
     public static void init() {
 
         blockTablette = new  BlockTablette(Material.wood).setUnlocalizedName(
-                "tablette").setCreativeTab(CreativeTabs.tabDecorations);
+                "table").setCreativeTab(CreativeTabs.tabDecorations);
     }
 
     public static void register() {
@@ -45,4 +45,5 @@ public class Blocks {
                                 + item.getUnlocalizedName().substring(5),
                                 "inventory"));
     }
+
 }
