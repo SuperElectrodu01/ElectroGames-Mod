@@ -1,8 +1,7 @@
 package fr.electrogames.proxy;
 
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import fr.electrogame.Items.Items;
+import fr.electrogames.blocks.Blocks;
 
 /**
  * Created by Louis (a.k.a Obelouix) on 07/05/2016.
@@ -12,17 +11,10 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class ClientProxy extends CommonProxy {
 
     @Override
-    public void preInit(FMLPreInitializationEvent e) {
-        super.preInit(e);
-    }
+    public void registerRenders() {
 
-    @Override
-    public void init(FMLInitializationEvent e) {
-        super.init(e);
-    }
+        Items.registerRenders();
+        Blocks.registerRenders();
 
-    @Override
-    public void postInit(FMLPostInitializationEvent e) {
-        super.postInit(e);
     }
 }

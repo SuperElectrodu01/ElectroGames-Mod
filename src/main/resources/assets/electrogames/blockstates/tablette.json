@@ -1,10 +1,5 @@
 {
     "variants": {
-        "normal": [
-            { "model": "tablette" },
-            { "model": "tablette" },
-            { "model": "tablette", "y": 180 },
-            { "model": "tablette", "y": 180 }
-        ]
+        "normal": [{ "model": "electrogames:tablette" }]
     }
 }
