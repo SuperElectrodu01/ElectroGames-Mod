@@ -13,7 +13,8 @@ sudo: false
 branches:
   only:
     - master
-
+  except:
+   - modeles
 # Use the gradle wrapper for 2.7
 before_install:
   - chmod +x gradlew
