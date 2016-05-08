@@ -1,3 +1,3 @@
 Block "Drop"
-Résistance "Verre"
+Résistance "four"
 Cassable "A la pioche"
