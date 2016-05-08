@@ -1,3 +1,5 @@
 Block "Drop"
-Résistance "Verre"
+Résistance "Block de fer"
 Cassable "A la pioche"
+Son "verre"
+Propriété "block iron"
